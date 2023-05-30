@@ -101,8 +101,12 @@ public class OrderServiceImpl implements OrderService {
                 }
                 return orderDetails;
 
-            } catch (Exception e) {
-                log.error("Server encountered exception :{} ", e.getStackTrace());
+            }
+            catch (ResponseStatusException ex) {
+                throw ex;
+            }
+            catch (Exception ex) {
+                log.error("Server encountered exception :{} ", ex.getStackTrace());
                 throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Server encountered error");
             }
         }
