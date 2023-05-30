@@ -1,0 +1,34 @@
+{
+	"info": {
+		"_postman_id": "aa18d747-470b-4b99-a875-62adaaba32fd",
+		"name": "BabyProducts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27681685"
+	},
+	"item": [
+		{
+			"name": "Create Baby Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "items",
+							"value": "bath_towel,scissor",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/gauravkhatod/Downloads/babyproducts.csv"
+						}
+					]
+				},
+				"url": "http://localhost:8080/order"
+			},
+			"response": []
+		}
+	]
+}
